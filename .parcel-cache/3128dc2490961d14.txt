@@ -33,7 +33,7 @@
 92E:\Yandex.Prakticum\sprint_1\node_modules\caniuse-lite\data\features\spellcheck-attribute.js121436361000000000 0
 71E:\Yandex.Prakticum\sprint_1\node_modules\cosmiconfig\dist\index.js.map121436361000000000 0
 59E:\Yandex.Prakticum\sprint_1\node_modules\neo-async\some.js121436361000000000 0
-41E:\Yandex.Prakticum\sprint_1\package.json133022872507671126 0
+41E:\Yandex.Prakticum\sprint_1\package.json133022873834199388 0
 61E:\Yandex.Prakticum\sprint_1\node_modules\lazy-cache\index.js131230486990000000 0
 61E:\Yandex.Prakticum\sprint_1\node_modules\has-flag\index.d.ts121436361000000000 0
 94E:\Yandex.Prakticum\sprint_1\node_modules\expand-brackets\node_modules\define-property\LICENSE130839027050000000 0
@@ -127,14 +127,14 @@
 73E:\Yandex.Prakticum\sprint_1\node_modules\weak-lru-cache\rollup.config.js121436361000000000 0
 92E:\Yandex.Prakticum\sprint_1\node_modules\nanomatch\node_modules\extend-shallow\package.json133020898280082988 0
 51E:\Yandex.Prakticum\sprint_1\node_modules\is-number133020898290635108 1
-33E:\Yandex.Prakticum\sprint_1\dist133022869940006489 1
+33E:\Yandex.Prakticum\sprint_1\dist133022874063237263 1
 67E:\Yandex.Prakticum\sprint_1\node_modules\brace-expansion\README.md131627221250000000 0
 85E:\Yandex.Prakticum\sprint_1\node_modules\caniuse-lite\data\features\web-animation.js121436361000000000 0
 78E:\Yandex.Prakticum\sprint_1\node_modules\highlight.js\lib\languages\irpf90.js121436361000000000 0
 62E:\Yandex.Prakticum\sprint_1\node_modules\process-nextick-args133020898278862960 1
 59E:\Yandex.Prakticum\sprint_1\node_modules\yaml\types\set.js121436361000000000 0
 97E:\Yandex.Prakticum\sprint_1\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\midl.h121436361000000000 0
-41E:\Yandex.Prakticum\sprint_1\netlify.toml133022871352822232 0
+41E:\Yandex.Prakticum\sprint_1\netlify.toml133022873977734477 0
 60E:\Yandex.Prakticum\sprint_1\node_modules\neo-async\retry.js121436361000000000 0
 46E:\Yandex.Prakticum\sprint_1\package-lock.json133020898323355111 0
 101E:\Yandex.Prakticum\sprint_1\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_dump.c121436361000000000 0
@@ -3856,7 +3856,7 @@
 66E:\Yandex.Prakticum\sprint_1\node_modules\moment\dist\locale\kk.js121436361000000000 0
 89E:\Yandex.Prakticum\sprint_1\node_modules\caniuse-lite\data\features\media-session-api.js121436361000000000 0
 66E:\Yandex.Prakticum\sprint_1\node_modules\moment\dist\locale\km.js121436361000000000 0
-44E:\Yandex.Prakticum\sprint_1\dist\index.html133022869938886500 0
+44E:\Yandex.Prakticum\sprint_1\dist\index.html133022874061607304 0
 66E:\Yandex.Prakticum\sprint_1\node_modules\moment\dist\locale\ko.js121436361000000000 0
 66E:\Yandex.Prakticum\sprint_1\node_modules\moment\dist\locale\ku.js121436361000000000 0
 66E:\Yandex.Prakticum\sprint_1\node_modules\moment\dist\locale\lv.js121436361000000000 0
@@ -7230,5 +7230,5 @@
 55E:\Yandex.Prakticum\sprint_1\node_modules\.bin\uglifyjs133020898305035076 0
 59E:\Yandex.Prakticum\sprint_1\node_modules\.bin\uglifyjs.cmd133020898305035076 0
 59E:\Yandex.Prakticum\sprint_1\node_modules\.bin\uglifyjs.ps1133020898305035076 0
-51E:\Yandex.Prakticum\sprint_1\dist\index.d437dc80.js133022869938886500 0
-55E:\Yandex.Prakticum\sprint_1\dist\index.d437dc80.js.map133022869939936525 0
+51E:\Yandex.Prakticum\sprint_1\dist\index.d437dc80.js133022874061607304 0
+55E:\Yandex.Prakticum\sprint_1\dist\index.d437dc80.js.map133022874063207271 0
