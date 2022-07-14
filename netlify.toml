@@ -1,2 +1,2 @@
 ﻿[build]
-  command = "npm run start"
+  command = "dist"
