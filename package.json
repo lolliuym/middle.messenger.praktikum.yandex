@@ -2,7 +2,7 @@
   "name": "sprint_1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
     "dev": "parcel index.hbs",
     "build": "parcel build index.hbs"
