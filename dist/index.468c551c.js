@@ -533,10 +533,13 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"b9BDZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-//import Handlebars from "handlebars";
 var _indexHbs = require("./index.hbs");
 var _indexHbsDefault = parcelHelpers.interopDefault(_indexHbs);
-var _globalScss = require("./styles/global.scss");
+var _globalScss = require("./assets/styles/global.scss");
+var _menuGlobalScss = require("./assets/styles/menuGlobal.scss");
+var _modalScss = require("./assets/styles/modal.scss");
+var _popupScss = require("./assets/styles/popup.scss");
+var _buttonsScss = require("./assets/styles/buttons.scss");
 var _button = require("./components/button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _indexJs = require("./pages/Chat/index.js");
@@ -555,11 +558,6 @@ var _settingPassword = require("./pages/SettingPassword");
 var _settingPasswordDefault = parcelHelpers.interopDefault(_settingPassword);
 var _settingProfile = require("./pages/SettingProfile");
 var _settingProfileDefault = parcelHelpers.interopDefault(_settingProfile);
-const data = {
-    h1: "Title",
-    content: "\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u043C\u043E\u0435"
-};
-console.log((0, _indexHbsDefault.default)(data));
 console.log((0, _indexHbsDefault.default));
 document.getElementById("root").innerHTML = (0, _indexHbsDefault.default)({});
 window.createButton = (id, value)=>{
@@ -568,7 +566,7 @@ window.createButton = (id, value)=>{
     document.getElementById("root").appendChild(htmlTpl.content);
 };
 
-},{"./index.hbs":"4a4hg","./components/button":"jstop","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./pages/page_404":"dW2vY","./pages/page_500":"6mU79","./pages/Registration":"8OSNk","./pages/Setting":"3iakf","./pages/SettingPassword":"5QX3n","./pages/SettingProfile":"01kgr","./styles/global.scss":"9i5Lw","./pages/Login/index":"h9HuR","./pages/Chat/index.js":"awCjl"}],"4a4hg":[function(require,module,exports) {
+},{"./index.hbs":"4a4hg","./components/button":"jstop","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./pages/page_404":"dW2vY","./pages/page_500":"6mU79","./pages/Registration":"8OSNk","./pages/Setting":"3iakf","./pages/SettingPassword":"5QX3n","./pages/SettingProfile":"01kgr","./pages/Login/index":"h9HuR","./pages/Chat/index.js":"awCjl","./assets/styles/global.scss":"k8B3P","./assets/styles/menuGlobal.scss":"ktSSs","./assets/styles/modal.scss":"bFvv2","./assets/styles/popup.scss":"iSZqO","./assets/styles/buttons.scss":"6hz8s"}],"4a4hg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12003,7 +12001,7 @@ exports.default = (id, value)=>{
     });
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"7La8H","./style.scss":"g3w18","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"7La8H":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"7La8H","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./style.scss":"g3w18"}],"7La8H":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12057,17 +12055,15 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
-var _styleScss = require("./style.scss");
-//import button from '../../components/button';
+var _notificationPageScss = require("../../assets/styles/notificationPage.scss");
 (0, _handlebarsDefault.default).registerPartial("page_404", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"OH75u","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./style.scss":"bw1ut"}],"OH75u":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"OH75u","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","../../assets/styles/notificationPage.scss":"aHnYx"}],"OH75u":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12078,28 +12074,26 @@ const templateFunction = (0, _handlebarsDefault.default).template({
         ">= 4.3.0"
     ],
     "main": function(container, depth0, helpers, partials, data) {
-        return '<div class="container">\r\n <div class="notification">\r\n   <h1>404</h1>\r\n  <p  >\u041D\u0435 \u0442\u0443\u0434\u0430 \u043F\u043E\u043F\u0430\u043B\u0438</p>\r\n  <a href="" >\u041D\u0430\u0437\u0430\u0434 \u043A \u0447\u0430\u0442\u0430\u043C</a>\r\n    \r\n  </div>\r\n  \r\n</div>\r\n';
+        return '+<div class="container">\r\n <div class="notification">\r\n   <h1>404</h1>\r\n  <p  >\u041D\u0435 \u0442\u0443\u0434\u0430 \u043F\u043E\u043F\u0430\u043B\u0438</p>\r\n  <a href="" >\u041D\u0430\u0437\u0430\u0434 \u043A \u0447\u0430\u0442\u0430\u043C</a>\r\n    \r\n  </div>\r\n  \r\n</div>\r\n';
     },
     "useData": true
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"bw1ut":[function() {},{}],"6mU79":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"aHnYx":[function() {},{}],"6mU79":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
-var _styleScss = require("./style.scss");
-//import button from '../../components/button';
+var _notificationPageScss = require("../../assets/styles/notificationPage.scss");
 (0, _handlebarsDefault.default).registerPartial("page_500", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"aeyic","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./style.scss":"52YMB"}],"aeyic":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"aeyic","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","../../assets/styles/notificationPage.scss":"aHnYx"}],"aeyic":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12116,22 +12110,20 @@ const templateFunction = (0, _handlebarsDefault.default).template({
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"52YMB":[function() {},{}],"8OSNk":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"aHnYx":[function() {},{}],"8OSNk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
-var _styleScss = require("./style.scss");
-//import button from '../../components/button';
+var _entryPageScss = require("../../assets/styles/entryPage.scss");
 (0, _handlebarsDefault.default).registerPartial("registration", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"auOgF","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./style.scss":"iSWMQ"}],"auOgF":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"auOgF","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","../../assets/styles/entryPage.scss":"9nsoO"}],"auOgF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12148,23 +12140,22 @@ const templateFunction = (0, _handlebarsDefault.default).template({
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"iSWMQ":[function() {},{}],"3iakf":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"9nsoO":[function() {},{}],"3iakf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
-var _styleScss = require("./style.scss");
+var _profilePageScss = require("../../assets/styles/profilePage.scss");
+var _modalScss = require("../../assets/styles/modal.scss");
 var _settingJs = require("./Setting.js");
-//import button from '../../components/button';
 (0, _handlebarsDefault.default).registerPartial("setting", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"4npJH","./style.scss":"jLbQg","./Setting.js":"kvH7h","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"4npJH":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"4npJH","./Setting.js":"kvH7h","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","../../assets/styles/profilePage.scss":"dMztY","../../assets/styles/modal.scss":"bFvv2"}],"4npJH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12181,7 +12172,7 @@ const templateFunction = (0, _handlebarsDefault.default).template({
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"jLbQg":[function() {},{}],"kvH7h":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"kvH7h":[function(require,module,exports) {
 const modal_change = document.querySelectorAll("[data-modal_change]");
 modal_change.forEach(function(trigger) {
     trigger.addEventListener("click", function(event1) {
@@ -12198,22 +12189,20 @@ modal_change.forEach(function(trigger) {
     });
 });
 
-},{}],"5QX3n":[function(require,module,exports) {
+},{}],"dMztY":[function() {},{}],"bFvv2":[function() {},{}],"5QX3n":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
-var _styleScss = require("./style.scss");
-//import button from '../../components/button';
+var _profilePageScss = require("../../assets/styles/profilePage.scss");
 (0, _handlebarsDefault.default).registerPartial("settingPassword", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"k0L1H","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./style.scss":"5upk8"}],"k0L1H":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"k0L1H","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","../../assets/styles/profilePage.scss":"dMztY"}],"k0L1H":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12230,22 +12219,20 @@ const templateFunction = (0, _handlebarsDefault.default).template({
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"5upk8":[function() {},{}],"01kgr":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"dMztY":[function() {},{}],"01kgr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
-var _styleScss = require("./style.scss");
-//import button from '../../components/button';
+var _profilePageScss = require("../../assets/styles/profilePage.scss");
 (0, _handlebarsDefault.default).registerPartial("settingProfile", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"17f0b","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./style.scss":"cc89N"}],"17f0b":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"17f0b","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","../../assets/styles/profilePage.scss":"dMztY"}],"17f0b":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12262,22 +12249,20 @@ const templateFunction = (0, _handlebarsDefault.default).template({
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"cc89N":[function() {},{}],"9i5Lw":[function() {},{}],"h9HuR":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"dMztY":[function() {},{}],"h9HuR":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
-var _styleScss = require("./style.scss");
-//import button from '../../components/button';
+var _entryPageScss = require("../../assets/styles/entryPage.scss");
 (0, _handlebarsDefault.default).registerPartial("login", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"aTm0g","./style.scss":"ryGie","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"aTm0g":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"aTm0g","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","../../assets/styles/entryPage.scss":"9nsoO"}],"aTm0g":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12294,23 +12279,21 @@ const templateFunction = (0, _handlebarsDefault.default).template({
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"ryGie":[function() {},{}],"awCjl":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"9nsoO":[function() {},{}],"awCjl":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
-//import Handlebars from 'handlebars/dist/handlebars.runtime';
 var _tplHbs = require("./tpl.hbs");
 var _tplHbsDefault = parcelHelpers.interopDefault(_tplHbs);
 var _styleScss = require("./style.scss");
-// import "./Chat"
-//import button from '../../components/button';
+var _chat = require("./Chat");
 (0, _handlebarsDefault.default).registerPartial("chat", (0, _tplHbsDefault.default));
 exports.default = (props = {})=>{
     return (0, _tplHbsDefault.default)(props);
 };
 
-},{"handlebars":"dH8Fg","./tpl.hbs":"8xU1q","./style.scss":"fcBAX","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"8xU1q":[function(require,module,exports) {
+},{"handlebars":"dH8Fg","./tpl.hbs":"8xU1q","./style.scss":"fcBAX","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh","./Chat":"g5zDe"}],"8xU1q":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
@@ -12321,11 +12304,65 @@ const templateFunction = (0, _handlebarsDefault.default).template({
         ">= 4.3.0"
     ],
     "main": function(container, depth0, helpers, partials, data) {
-        return ' <div class="chat">\r\n  <div class="chat__interface no-gutters">\r\n    <div class="row">\r\n      <div class="col-4"><div class="chat__menu">\r\n          <h6 class="text-grey">\u041F\u0440\u043E\u0444\u0438\u043B\u044C</h6>\r\n          <i class="fa fa-solid fa-angle-right text-grey"></i>\r\n\r\n        </div></div>\r\n      <div class="col-8">\r\n        <div class="chat__menu chat__menu--between">\r\n          <div class="chat__profile">\r\n            <div class="profile__image"></div>\r\n            <div class="text">\r\n              <h6>\u0412\u0430\u0434\u0438\u043C</h6>\r\n\r\n            </div></div>\r\n\r\n          <span class="tray--right">\r\n            <i\r\n              class="pointer fa fa-solid fa-bars"\r\n              onClick="modalAccount()"\r\n              data-modal_account="modal-menu"\r\n            ></i>\r\n\r\n          </span>\r\n        </div></div>\r\n    </div>\r\n    <div class="row"><div class="col-4 border-right">\r\n\r\n        <div class="search-box">\r\n          <div class="input-wrapper">\r\n            <i class="fa fa-solid fa-1"></i>\r\n            <input placeholder="\u041F\u043E\u0438\u0441\u043A" class="input_search" type="text" />\r\n          </div>\r\n        </div>\r\n        <ul\r\n          class="drawer-friends"\r\n          style=" /* \u0423\u0431\u0438\u0440\u0430\u0435\u043C \u043C\u0430\u0440\u043A\u0435\u0440\u044B */margin-left: 0; /* \u041E\u0442\u0441\u0442\u0443\u043F \u0441\u043B\u0435\u0432\u0430 \u0432 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435 IE \u0438 Opera */padding-left: 0;"\r\n        >\r\n\r\n          <li\r\n            class="drawer-friend drawer-friend--onhover"\r\n            style="\r\n    list-style-type: none; /* \u0423\u0431\u0438\u0440\u0430\u0435\u043C \u043C\u0430\u0440\u043A\u0435\u0440\u044B */\r\n"\r\n          >\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li\r\n            class="drawer-friend drawer-friend--onhover"\r\n            style="\r\n    text-decoration: none;\r\n"\r\n          >\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n        </ul>\r\n\r\n      </div>\r\n\r\n      <div class="col-8 chat__communion">\r\n        <div class="">\r\n\r\n          <div class="popup" id="modal-menu">\r\n            <div class="popup__card">\r\n              <button data-modal_add="modal-add" class="popup__btn">\r\n                <i\r\n                  class="popup__icon popup__icon--circle fa fa-solid fa-plus"\r\n                ></i>\r\n                \u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</button>\r\n              <button data-modal_delete="modal-delete" class="popup__btn">\r\n                <i\r\n                  class="popup__icon popup__icon--circle fa fa-solid fa-xmark"\r\n                ></i>\r\n                \u0423\u0434\u0430\u043B\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</button>\r\n\r\n            </div>\r\n          </div>\r\n          <div class="modal" id="modal-add">\r\n            <div class="modal__dialog">\r\n              <button class="modal__close modal-exit">\xd7</button>\r\n              <header class="modal__header">\r\n                <h3 class="modal__title">\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</h3>\r\n              </header>\r\n              <div class="modal__content">\r\n                <label for=""><span>\u041B\u043E\u0433\u0438\u043D:</span>\r\n                  <input type="text" class="input" />\r\n                </label>\r\n\r\n              </div>\r\n              <footer class="modal__footer">\r\n                <button class="btn btn--primary modal-exit">\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C</button>\r\n              </footer>\r\n            </div>\r\n          </div>\r\n\r\n          <div class="modal" id="modal-delete">\r\n            <div class="modal__dialog">\r\n              <button class="modal__close modal-exit">\xd7</button>\r\n              <header class="modal__header">\r\n                <h3 class="modal__title">\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</h3>\r\n              </header>\r\n              <div class="modal__content">\r\n                <label for=""><span>\u041B\u043E\u0433\u0438\u043D:</span>\r\n                  <input type="text" class="input" />\r\n                </label>\r\n\r\n              </div>\r\n              <footer class="modal__footer">\r\n                <button class="btn btn--primary modal-exit">\u0423\u0434\u0430\u043B\u0438\u0442\u044C</button>\r\n\r\n              </footer>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <main class="chat__panel panel">\r\n          <div class="panel__communion">\r\n            <div class="panel__timestamp text-grey">19 \u0438\u044E\u043D\u044F</div>\r\n            <ul>\r\n              <li class="panel__message">\r\n                <div class="panel__bubble panel__bubble--left">\r\n                  <p>\u041F\u0440\u0438\u0432\u0435\u0442! \u0421\u043C\u043E\u0442\u0440\u0438, \u0442\u0443\u0442 \u0432\u0441\u043F\u043B\u044B\u043B \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u043A\u0443\u0441\u043E\u043A \u043B\u0443\u043D\u043D\u043E\u0439\r\n                    \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u0438\u0441\u0442\u043E\u0440\u0438\u0438 \u2014 \u041D\u0410\u0421\u0410 \u0432 \u043A\u0430\u043A\u043E\u0439-\u0442\u043E \u043C\u043E\u043C\u0435\u043D\u0442 \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u043B\u0430\r\n                    \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043C\u043E\u0434\u0435\u043B\u044C SWC \u0434\u043B\u044F \u043F\u043E\u043B\u0435\u0442\u043E\u0432 \u043D\u0430 \u041B\u0443\u043D\u0443.\r\n                    \u0421\u0435\u0439\u0447\u0430\u0441 \u043C\u044B \u0432\u0441\u0435 \u0437\u043D\u0430\u0435\u043C \u0447\u0442\u043E \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u043B\u0435\u0442\u0430\u043B\u0438 \u0441 \u043C\u043E\u0434\u0435\u043B\u044C\u044E 500 EL \u2014\r\n                    \u0438 \u043A \u0441\u043B\u043E\u0432\u0443 \u0433\u043E\u0432\u043E\u0440\u044F, \u0432\u0441\u0435 \u0442\u0443\u0448\u043A\u0438 \u044D\u0442\u0438\u0445 \u043A\u0430\u043C\u0435\u0440 \u0432\u0441\u0435 \u0435\u0449\u0435 \u043D\u0430\u0445\u043E\u0434\u044F\u0442\u0441\u044F \u043D\u0430\r\n                    \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438 \u041B\u0443\u043D\u044B, \u0442\u0430\u043A \u043A\u0430\u043A \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u0441 \u0441\u043E\u0431\u043E\u0439 \u0437\u0430\u0431\u0440\u0430\u043B\u0438 \u0442\u043E\u043B\u044C\u043A\u043E\r\n                    \u043A\u0430\u0441\u0441\u0435\u0442\u044B \u0441 \u043F\u043B\u0435\u043D\u043A\u043E\u0439. \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0432 \u0438\u0442\u043E\u0433\u0435 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u043B SWC \u0434\u043B\u044F\r\n                    \u043A\u043E\u0441\u043C\u043E\u0441\u0430, \u043D\u043E \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A \u0438 \u043D\u0430 \u0440\u0430\u043A\u0435\u0442\u0443 \u043E\u043D\u0438 \u0442\u0430\u043A \u043D\u0438\u043A\u043E\u0433\u0434\u0430\r\n                    \u0438 \u043D\u0435 \u043F\u043E\u043F\u0430\u043B\u0438. \u0412\u0441\u0435\u0433\u043E \u0438\u0445 \u0431\u044B\u043B\u043E \u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u043E 25 \u0448\u0442\u0443\u043A, \u043E\u0434\u043D\u0443 \u0438\u0437 \u043D\u0438\u0445\r\n                    \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u043F\u0440\u043E\u0434\u0430\u043B\u0438 \u043D\u0430 \u0430\u0443\u043A\u0446\u0438\u043E\u043D\u0435 \u0437\u0430 45000 \u0435\u0432\u0440\u043E.</p>\r\n                  <p class="panel__bubble_time text-grey">11:56</p>\r\n                </div>\r\n              </li>\r\n\r\n              <li class="panel__message">\r\n                <div\r\n                  class="panel__bubble panel__bubble--left panel__bubble--img"\r\n                >\r\n                  <div class="">\r\n                    <img\r\n                      src="https://79.img.avito.st/image/1/1.8lDolra6XrneP5y8gK2PKjQ1WL1ctVZ7WTVasVw9XA.A1GlhzIn3YNArxmfwqjWI-LAX8imy1YC_a6hbWMEKaE"\r\n                      width="200"\r\n                      alt=""\r\n                      class=""\r\n                    />\r\n                  </div>\r\n                  <p\r\n                    class="panel__bubble_time panel__bubble_time--dark text-white"\r\n                  >11:56</p>\r\n                </div>\r\n              </li>\r\n\r\n              <li class="panel__message panel__message--right">\r\n                <div class="panel__bubble panel__bubble--right">\r\n                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n                    Eius dolorum tempore inventore consequatur hic?</p>\r\n\r\n                  <p class="panel__bubble_time text-white"><i\r\n                      class="icon fa fa-solid fa-check"\r\n                    ></i>11:56</p></div>\r\n              </li>\r\n\r\n              <li class="panel__message">\r\n                <div class="panel__bubble panel__bubble--left">\r\n\r\n                  <p>\u041F\u0440\u0438\u0432\u0435\u0442! \u0421\u043C\u043E\u0442\u0440\u0438, \u0442\u0443\u0442 \u0432\u0441\u043F\u043B\u044B\u043B \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u043A\u0443\u0441\u043E\u043A \u043B\u0443\u043D\u043D\u043E\u0439\r\n                    \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u0438\u0441\u0442\u043E\u0440\u0438\u0438 \u2014 \u041D\u0410\u0421\u0410 \u0432 \u043A\u0430\u043A\u043E\u0439-\u0442\u043E \u043C\u043E\u043C\u0435\u043D\u0442 \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u043B\u0430\r\n                    \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043C\u043E\u0434\u0435\u043B\u044C SWC \u0434\u043B\u044F \u043F\u043E\u043B\u0435\u0442\u043E\u0432 \u043D\u0430 \u041B\u0443\u043D\u0443.\r\n                    \u0421\u0435\u0439\u0447\u0430\u0441 \u043C\u044B \u0432\u0441\u0435 \u0437\u043D\u0430\u0435\u043C \u0447\u0442\u043E \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u043B\u0435\u0442\u0430\u043B\u0438 \u0441 \u043C\u043E\u0434\u0435\u043B\u044C\u044E 500 EL \u2014\r\n                    \u0438 \u043A \u0441\u043B\u043E\u0432\u0443 \u0433\u043E\u0432\u043E\u0440\u044F, \u0432\u0441\u0435 \u0442\u0443\u0448\u043A\u0438 \u044D\u0442\u0438\u0445 \u043A\u0430\u043C\u0435\u0440 \u0432\u0441\u0435 \u0435\u0449\u0435 \u043D\u0430\u0445\u043E\u0434\u044F\u0442\u0441\u044F \u043D\u0430\r\n                    \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438 \u041B\u0443\u043D\u044B, \u0442\u0430\u043A \u043A\u0430\u043A \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u0441 \u0441\u043E\u0431\u043E\u0439 \u0437\u0430\u0431\u0440\u0430\u043B\u0438 \u0442\u043E\u043B\u044C\u043A\u043E\r\n                    \u043A\u0430\u0441\u0441\u0435\u0442\u044B \u0441 \u043F\u043B\u0435\u043D\u043A\u043E\u0439. \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0432 \u0438\u0442\u043E\u0433\u0435 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u043B SWC \u0434\u043B\u044F\r\n                    \u043A\u043E\u0441\u043C\u043E\u0441\u0430, \u043D\u043E \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A \u0438 \u043D\u0430 \u0440\u0430\u043A\u0435\u0442\u0443 \u043E\u043D\u0438 \u0442\u0430\u043A \u043D\u0438\u043A\u043E\u0433\u0434\u0430\r\n                    \u0438 \u043D\u0435 \u043F\u043E\u043F\u0430\u043B\u0438. \u0412\u0441\u0435\u0433\u043E \u0438\u0445 \u0431\u044B\u043B\u043E \u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u043E 25 \u0448\u0442\u0443\u043A, \u043E\u0434\u043D\u0443 \u0438\u0437 \u043D\u0438\u0445\r\n                    \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u043F\u0440\u043E\u0434\u0430\u043B\u0438 \u043D\u0430 \u0430\u0443\u043A\u0446\u0438\u043E\u043D\u0435 \u0437\u0430 45000 \u0435\u0432\u0440\u043E.</p>\r\n                  <p class="panel__bubble_time text-grey">11:56</p>\r\n                </div>\r\n              </li>\r\n            </ul>\r\n\r\n          </div>\r\n\r\n        </main>\r\n        <div class="">\r\n          <div class="chat__action_message action_message">\r\n            <i\r\n              class="fa fa-solid fa-paperclip pointer clip modal-exit"\r\n              data-modal_clip="modal-clip"\r\n            ></i>\r\n            <input type="text" placeholder="\u0421\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435" class="input_search" />\r\n            <button class="send pointer"><i\r\n                class="fa fa-solid fa-angle-right"\r\n              ></i></button>\r\n            <div class="popup popup__clip" id="modal-clip">\r\n              <div class="popup__card">\r\n                <button class="popup__btn">\r\n                  <i class="popup__icon fa fa-solid fa-file-image"></i>\r\n                  \u0424\u043E\u0442\u043E \u0438\u043B\u0438 \u0412\u0438\u0434\u0435\u043E</button>\r\n                <button class="popup__btn popup__btn--secondary">\r\n\r\n                  <i class="popup__icon fa fa-solid fa-file-circle-check"></i>\r\n                  \u0424\u0430\u0439\u043B</button>\r\n                <button class="popup__btn popup__btn--secondary">\r\n                  <i class="popup__icon fa fa-solid fa-compass"></i>\r\n                  \u041B\u043E\u043A\u0430\u0446\u0438\u044F</button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div></div>\r\n\r\n  </div>\r\n</div>\r\n\r\n';
+        return '<div class="chat">\r\n  <div class="chat__interface no-gutters">\r\n    <div class="row">\r\n      <div class="col-4"><div class="chat__menu">\r\n          <h6 class="text-grey">\u041F\u0440\u043E\u0444\u0438\u043B\u044C</h6>\r\n          <i class="fa fa-solid fa-angle-right text-grey"></i>\r\n\r\n        </div></div>\r\n      <div class="col-8">\r\n        <div class="chat__menu chat__menu--between">\r\n          <div class="chat__profile">\r\n            <div class="profile__image"></div>\r\n            <div class="text">\r\n              <h6>\u0412\u0430\u0434\u0438\u043C</h6>\r\n\r\n            </div></div>\r\n\r\n          <span class="tray--right">\r\n            <i\r\n              class="pointer fa fa-solid fa-bars"\r\n              onClick="modalAccount()"\r\n              data-modal_account="modal-menu"\r\n            ></i>\r\n\r\n          </span>\r\n        </div></div>\r\n    </div>\r\n    <div class="row"><div class="col-4 border-right">\r\n\r\n        <div class="search-box">\r\n          <div class="input-wrapper">\r\n            <i class="fa fa-solid fa-search"></i>\r\n            <input placeholder="\u041F\u043E\u0438\u0441\u043A" class="input_search" type="text" />\r\n          </div>\r\n        </div>\r\n        <ul\r\n          class="drawer-friends"\r\n          style=" /* \u0423\u0431\u0438\u0440\u0430\u0435\u043C \u043C\u0430\u0440\u043A\u0435\u0440\u044B */margin-left: 0; /* \u041E\u0442\u0441\u0442\u0443\u043F \u0441\u043B\u0435\u0432\u0430 \u0432 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435 IE \u0438 Opera */padding-left: 0;"\r\n        >\r\n\r\n          <li\r\n            class="drawer-friend drawer-friend--onhover"\r\n            style="\r\n    list-style-type: none; /* \u0423\u0431\u0438\u0440\u0430\u0435\u043C \u043C\u0430\u0440\u043A\u0435\u0440\u044B */\r\n"\r\n          >\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li class="drawer-friend drawer-friend--onhover">\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n          <li\r\n            class="drawer-friend drawer-friend--onhover"\r\n            style="\r\n    text-decoration: none;\r\n"\r\n          >\r\n            <div class="profile__image"></div>\r\n            <div class="drawer-friend__message">\r\n              <div class="main">\r\n                <h6 class="main__text">\u041A\u0438\u043D\u043E\u043A\u043B\u0443\u0431</h6>\r\n                <span class="time text-grey small">12:00</span>\r\n              </div>\r\n              <div class="info">\r\n                <p class="text-grey"><b class="info__your">\u0412\u044B:</b>\r\n                  \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440 \u0441\u0442\u0438\u043A\u0435\u0440</p>\r\n\r\n                <div class="unread_number"><span>12</span>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </li>\r\n          <hr />\r\n        </ul>\r\n\r\n      </div>\r\n\r\n      <div class="col-8 chat__communion">\r\n        <div class="">\r\n\r\n          <div class="popup" id="modal-menu">\r\n            <div class="popup__card">\r\n              <button data-modal_add="modal-add" class="popup__btn">\r\n                <i\r\n                  class="popup__icon popup__icon--circle fa fa-solid fa-plus"\r\n                ></i>\r\n                \u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</button>\r\n              <button data-modal_delete="modal-delete" class="popup__btn">\r\n                <i\r\n                  class="popup__icon popup__icon--circle fa fa-solid fa-xmark"\r\n                ></i>\r\n                \u0423\u0434\u0430\u043B\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</button>\r\n\r\n            </div>\r\n          </div>\r\n          <div class="modal" id="modal-add">\r\n            <div class="modal__dialog">\r\n              <button class="modal__close modal-exit">\xd7</button>\r\n              <header class="modal__header">\r\n                <h3 class="modal__title">\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</h3>\r\n              </header>\r\n              <div class="modal__content">\r\n                <label for=""><span>\u041B\u043E\u0433\u0438\u043D:</span>\r\n                  <input type="text" class="input" />\r\n                </label>\r\n\r\n              </div>\r\n              <footer class="modal__footer">\r\n                <button class="btn btn--primary modal-exit">\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C</button>\r\n              </footer>\r\n            </div>\r\n          </div>\r\n\r\n          <div class="modal" id="modal-delete">\r\n            <div class="modal__dialog">\r\n              <button class="modal__close modal-exit">\xd7</button>\r\n              <header class="modal__header">\r\n                <h3 class="modal__title">\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F</h3>\r\n              </header>\r\n              <div class="modal__content">\r\n                <label for=""><span>\u041B\u043E\u0433\u0438\u043D:</span>\r\n                  <input type="text" class="input" />\r\n                </label>\r\n\r\n              </div>\r\n              <footer class="modal__footer">\r\n                <button class="btn btn--primary modal-exit">\u0423\u0434\u0430\u043B\u0438\u0442\u044C</button>\r\n\r\n              </footer>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <main class="chat__panel panel">\r\n          <div class="panel__communion">\r\n            <div class="panel__timestamp text-grey">19 \u0438\u044E\u043D\u044F</div>\r\n            <ul>\r\n              <li class="panel__message">\r\n                <div class="panel__bubble panel__bubble--left">\r\n                  <p>\u041F\u0440\u0438\u0432\u0435\u0442! \u0421\u043C\u043E\u0442\u0440\u0438, \u0442\u0443\u0442 \u0432\u0441\u043F\u043B\u044B\u043B \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u043A\u0443\u0441\u043E\u043A \u043B\u0443\u043D\u043D\u043E\u0439\r\n                    \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u0438\u0441\u0442\u043E\u0440\u0438\u0438 \u2014 \u041D\u0410\u0421\u0410 \u0432 \u043A\u0430\u043A\u043E\u0439-\u0442\u043E \u043C\u043E\u043C\u0435\u043D\u0442 \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u043B\u0430\r\n                    \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043C\u043E\u0434\u0435\u043B\u044C SWC \u0434\u043B\u044F \u043F\u043E\u043B\u0435\u0442\u043E\u0432 \u043D\u0430 \u041B\u0443\u043D\u0443.\r\n                    \u0421\u0435\u0439\u0447\u0430\u0441 \u043C\u044B \u0432\u0441\u0435 \u0437\u043D\u0430\u0435\u043C \u0447\u0442\u043E \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u043B\u0435\u0442\u0430\u043B\u0438 \u0441 \u043C\u043E\u0434\u0435\u043B\u044C\u044E 500 EL \u2014\r\n                    \u0438 \u043A \u0441\u043B\u043E\u0432\u0443 \u0433\u043E\u0432\u043E\u0440\u044F, \u0432\u0441\u0435 \u0442\u0443\u0448\u043A\u0438 \u044D\u0442\u0438\u0445 \u043A\u0430\u043C\u0435\u0440 \u0432\u0441\u0435 \u0435\u0449\u0435 \u043D\u0430\u0445\u043E\u0434\u044F\u0442\u0441\u044F \u043D\u0430\r\n                    \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438 \u041B\u0443\u043D\u044B, \u0442\u0430\u043A \u043A\u0430\u043A \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u0441 \u0441\u043E\u0431\u043E\u0439 \u0437\u0430\u0431\u0440\u0430\u043B\u0438 \u0442\u043E\u043B\u044C\u043A\u043E\r\n                    \u043A\u0430\u0441\u0441\u0435\u0442\u044B \u0441 \u043F\u043B\u0435\u043D\u043A\u043E\u0439. \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0432 \u0438\u0442\u043E\u0433\u0435 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u043B SWC \u0434\u043B\u044F\r\n                    \u043A\u043E\u0441\u043C\u043E\u0441\u0430, \u043D\u043E \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A \u0438 \u043D\u0430 \u0440\u0430\u043A\u0435\u0442\u0443 \u043E\u043D\u0438 \u0442\u0430\u043A \u043D\u0438\u043A\u043E\u0433\u0434\u0430\r\n                    \u0438 \u043D\u0435 \u043F\u043E\u043F\u0430\u043B\u0438. \u0412\u0441\u0435\u0433\u043E \u0438\u0445 \u0431\u044B\u043B\u043E \u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u043E 25 \u0448\u0442\u0443\u043A, \u043E\u0434\u043D\u0443 \u0438\u0437 \u043D\u0438\u0445\r\n                    \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u043F\u0440\u043E\u0434\u0430\u043B\u0438 \u043D\u0430 \u0430\u0443\u043A\u0446\u0438\u043E\u043D\u0435 \u0437\u0430 45000 \u0435\u0432\u0440\u043E.</p>\r\n                  <p class="panel__bubble_time text-grey">11:56</p>\r\n                </div>\r\n              </li>\r\n\r\n              <li class="panel__message">\r\n                <div\r\n                  class="panel__bubble panel__bubble--left panel__bubble--img"\r\n                >\r\n                  <div class="">\r\n                    <img\r\n                      src="https://79.img.avito.st/image/1/1.8lDolra6XrneP5y8gK2PKjQ1WL1ctVZ7WTVasVw9XA.A1GlhzIn3YNArxmfwqjWI-LAX8imy1YC_a6hbWMEKaE"\r\n                      width="200"\r\n                      alt=""\r\n                      class=""\r\n                    />\r\n                  </div>\r\n                  <p\r\n                    class="panel__bubble_time panel__bubble_time--dark text-white"\r\n                  >11:56</p>\r\n                </div>\r\n              </li>\r\n\r\n              <li class="panel__message panel__message--right">\r\n                <div class="panel__bubble panel__bubble--right">\r\n                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.\r\n                    Eius dolorum tempore inventore consequatur hic?</p>\r\n\r\n                  <p class="panel__bubble_time text-white"><i\r\n                      class="icon fa fa-solid fa-check"\r\n                    ></i>11:56</p></div>\r\n              </li>\r\n\r\n              <li class="panel__message">\r\n                <div class="panel__bubble panel__bubble--left">\r\n\r\n                  <p>\u041F\u0440\u0438\u0432\u0435\u0442! \u0421\u043C\u043E\u0442\u0440\u0438, \u0442\u0443\u0442 \u0432\u0441\u043F\u043B\u044B\u043B \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u043A\u0443\u0441\u043E\u043A \u043B\u0443\u043D\u043D\u043E\u0439\r\n                    \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u043E\u0439 \u0438\u0441\u0442\u043E\u0440\u0438\u0438 \u2014 \u041D\u0410\u0421\u0410 \u0432 \u043A\u0430\u043A\u043E\u0439-\u0442\u043E \u043C\u043E\u043C\u0435\u043D\u0442 \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u043B\u0430\r\n                    \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u043C\u043E\u0434\u0435\u043B\u044C SWC \u0434\u043B\u044F \u043F\u043E\u043B\u0435\u0442\u043E\u0432 \u043D\u0430 \u041B\u0443\u043D\u0443.\r\n                    \u0421\u0435\u0439\u0447\u0430\u0441 \u043C\u044B \u0432\u0441\u0435 \u0437\u043D\u0430\u0435\u043C \u0447\u0442\u043E \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u043B\u0435\u0442\u0430\u043B\u0438 \u0441 \u043C\u043E\u0434\u0435\u043B\u044C\u044E 500 EL \u2014\r\n                    \u0438 \u043A \u0441\u043B\u043E\u0432\u0443 \u0433\u043E\u0432\u043E\u0440\u044F, \u0432\u0441\u0435 \u0442\u0443\u0448\u043A\u0438 \u044D\u0442\u0438\u0445 \u043A\u0430\u043C\u0435\u0440 \u0432\u0441\u0435 \u0435\u0449\u0435 \u043D\u0430\u0445\u043E\u0434\u044F\u0442\u0441\u044F \u043D\u0430\r\n                    \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438 \u041B\u0443\u043D\u044B, \u0442\u0430\u043A \u043A\u0430\u043A \u0430\u0441\u0442\u0440\u043E\u043D\u0430\u0432\u0442\u044B \u0441 \u0441\u043E\u0431\u043E\u0439 \u0437\u0430\u0431\u0440\u0430\u043B\u0438 \u0442\u043E\u043B\u044C\u043A\u043E\r\n                    \u043A\u0430\u0441\u0441\u0435\u0442\u044B \u0441 \u043F\u043B\u0435\u043D\u043A\u043E\u0439. \u0425\u0430\u0441\u0441\u0435\u043B\u044C\u0431\u043B\u0430\u0434 \u0432 \u0438\u0442\u043E\u0433\u0435 \u0430\u0434\u0430\u043F\u0442\u0438\u0440\u043E\u0432\u0430\u043B SWC \u0434\u043B\u044F\r\n                    \u043A\u043E\u0441\u043C\u043E\u0441\u0430, \u043D\u043E \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0448\u043B\u043E \u043D\u0435 \u0442\u0430\u043A \u0438 \u043D\u0430 \u0440\u0430\u043A\u0435\u0442\u0443 \u043E\u043D\u0438 \u0442\u0430\u043A \u043D\u0438\u043A\u043E\u0433\u0434\u0430\r\n                    \u0438 \u043D\u0435 \u043F\u043E\u043F\u0430\u043B\u0438. \u0412\u0441\u0435\u0433\u043E \u0438\u0445 \u0431\u044B\u043B\u043E \u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u043E 25 \u0448\u0442\u0443\u043A, \u043E\u0434\u043D\u0443 \u0438\u0437 \u043D\u0438\u0445\r\n                    \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u043F\u0440\u043E\u0434\u0430\u043B\u0438 \u043D\u0430 \u0430\u0443\u043A\u0446\u0438\u043E\u043D\u0435 \u0437\u0430 45000 \u0435\u0432\u0440\u043E.</p>\r\n                  <p class="panel__bubble_time text-grey">11:56</p>\r\n                </div>\r\n              </li>\r\n            </ul>\r\n\r\n          </div>\r\n\r\n        </main>\r\n        <div class="">\r\n          <div class="chat__action_message action_message">\r\n            <i\r\n              class="fa fa-solid fa-paperclip pointer clip modal-exit"\r\n              data-modal_clip="modal-clip"\r\n            ></i>\r\n            <input type="text" placeholder="\u0421\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435" class="input_search" />\r\n            <button class="send pointer"><i\r\n                class="fa fa-solid fa-angle-right"\r\n              ></i></button>\r\n            <div class="popup popup__clip" id="modal-clip">\r\n              <div class="popup__card">\r\n                <button class="popup__btn">\r\n                  <i class="popup__icon fa fa-solid fa-file-image"></i>\r\n                  \u0424\u043E\u0442\u043E \u0438\u043B\u0438 \u0412\u0438\u0434\u0435\u043E</button>\r\n                <button class="popup__btn popup__btn--secondary">\r\n\r\n                  <i class="popup__icon fa fa-solid fa-file-circle-check"></i>\r\n                  \u0424\u0430\u0439\u043B</button>\r\n                <button class="popup__btn popup__btn--secondary">\r\n                  <i class="popup__icon fa fa-solid fa-compass"></i>\r\n                  \u041B\u043E\u043A\u0430\u0446\u0438\u044F</button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div></div>\r\n\r\n  </div>\r\n</div>\r\n\r\n';
     },
     "useData": true
 });
 exports.default = templateFunction;
 
-},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"fcBAX":[function() {},{}]},["21Te3","b9BDZ"], "b9BDZ", "parcelRequire40a5")
+},{"handlebars":"dH8Fg","@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}],"fcBAX":[function() {},{}],"g5zDe":[function(require,module,exports) {
+const modal_account = document.querySelectorAll("[data-modal_account]");
+const modal_add = document.querySelectorAll("[data-modal_add]");
+const modal_delete = document.querySelectorAll("[data-modal_delete]");
+const modal_clip = document.querySelectorAll("[data-modal_clip]");
+function modalAccount() {
+    modal_account.forEach(function(trigger) {
+        trigger.addEventListener("click", function(event) {
+            event.preventDefault();
+            const modal = document.getElementById(trigger.dataset.modal_account);
+            modal.classList.toggle("open");
+            trigger.classList.toggle("modal-exit");
+            const exits = document.querySelectorAll(".modal-exit");
+        });
+    });
+}
+modal_add.forEach(function(trigger) {
+    trigger.addEventListener("click", function(event1) {
+        event1.preventDefault();
+        const modal = document.getElementById(trigger.dataset.modal_add);
+        modal.classList.add("open");
+        const exits = modal.querySelectorAll(".modal-exit");
+        exits.forEach(function(exit) {
+            exit.addEventListener("click", function(event) {
+                event.preventDefault();
+                modal.classList.remove("open");
+            });
+        });
+    });
+});
+modal_delete.forEach(function(trigger) {
+    trigger.addEventListener("click", function(event2) {
+        event2.preventDefault();
+        const modal = document.getElementById(trigger.dataset.modal_delete);
+        modal.classList.add("open");
+        const exits = modal.querySelectorAll(".modal-exit");
+        exits.forEach(function(exit) {
+            exit.addEventListener("click", function(event) {
+                event.preventDefault();
+                modal.classList.remove("open");
+            });
+        });
+    });
+});
+modal_clip.forEach(function(trigger) {
+    trigger.addEventListener("click", function(event) {
+        event.preventDefault();
+        const modal = document.getElementById(trigger.dataset.modal_clip);
+        modal.classList.toggle("open");
+        trigger.classList.toggle("modal-exit");
+        const exits = document.querySelectorAll(".modal-exit");
+    });
+});
+
+},{}],"k8B3P":[function() {},{}],"ktSSs":[function() {},{}],"bFvv2":[function() {},{}],"iSZqO":[function() {},{}],"6hz8s":[function() {},{}]},["21Te3","b9BDZ"], "b9BDZ", "parcelRequire40a5")
 

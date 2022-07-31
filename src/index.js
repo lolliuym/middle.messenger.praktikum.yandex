@@ -1,15 +1,12 @@
-﻿//import Handlebars from "handlebars";
-import tpl from './index.hbs';
+﻿import tpl from './index.hbs';
+ 
+import './assets/styles/global.scss';
+import './assets/styles/menuGlobal.scss';
+import './assets/styles/modal.scss';
+import './assets/styles/popup.scss';
+import './assets/styles/buttons.scss';
 
-const data = {
-	h1: 'Title',
-	content: 'Содержимое'
 
-}
-
-console.log(tpl(data));
-
-import './styles/global.scss';
 import button from './components/button';
 import chat from './pages/Chat/index.js';
 import login from './pages/Login/index';
