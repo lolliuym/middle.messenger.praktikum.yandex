@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="profile">  
+    <div class="profile__avatar">
+      <div class="avatar">
+        <i class="fa fa-solid fa-image"></i>
+          
+        </div>
+     </div>
+    <div class="profile__passport">
+       <div class="profile__row">
+         <p class="text-black">Почта</p>
+         <input class="text-muted" name="email" value="pochta@yandex.ru" type="text" readonly="">
+         
+       </div>
+      <div class="profile__row">
+         <p class="text-black">Логин</p>
+<input class="text-muted" name="login" value="ivanivanov" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Имя</p>
+<input class="text-muted" name="first_name" value="Иван" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Фамилия</p>
+<input class="text-muted" name="second_name" value="Иванов" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Имя в чате</p>
+<input class="text-muted" name="display_name" value="Иван" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Телефон</p>
+<input class="text-muted" name="phone" value="+7 (909) 967 30 30" type="text" readonly="">       </div>
+    </div>
+    <div class="profile__action">
+            <button class="btn btn--primary">Сохранить</button>
+
+  
+      
+    </div>
+    
+  </div>
+
+</div>
+<script src="92aa48548ea8f886"></script>

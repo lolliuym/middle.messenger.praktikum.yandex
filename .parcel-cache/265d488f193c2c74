@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="form">  <form action="">
+    <div class="header">
+      <h3>Регистрация</h3>
+    </div>
+    <div class="body">
+      <label for="">Почта:
+      <input type="text" name="email" required="required"></label>
+       <label for="">Логин:
+      <input type="text" name="login" required="required"></label>
+      <label for="">Имя:
+      <input type="text" name="first_name" required="required"></label>
+      <label for="">Фамилия:
+      <input type="text" name="second_name" required="required"></label>
+      <label for="">Телефон:
+      <input type="number" name="phone" required="required"></label> 
+      
+      <label for="">Пароль
+      <input type="password" name="password" required="required"></label>
+         <label for="">Пароль (ещё раз)
+      <input type="password" name="password_repeat" required="required"></label>
+    </div>
+    <div class="footer">
+      <button class="btn btn--primary">Зарегистироватья</button>
+      <button class="btn btn--secondary">Войти</button>
+    </div>
+  </form></div>
+
+</div>
+<script src="823dc2c325f30213"></script>
