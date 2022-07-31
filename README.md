@@ -6,4 +6,4 @@ https://github.com/mukhindev-praktikum/middle.messenger.praktikum.yandex/pull/1
 * Разработан собственный [шаблонизатор](#шаблонизатор)
 * Настроена сборка с использованием [Parcel](https://parceljs.org/) и раздача статики сервером на Express
 * Свёрстаны основные страницы приложения с использованием шаблонизатора
-* Приложение автоматически деплоится на [Netlify](https://www.netlify.com/) из ветки `deploy`. [Ссылка на приложение](https://)
+* Приложение автоматически деплоится на [Netlify](https://www.netlify.com/) из ветки `deploy`. [Ссылка на приложение](https://golden-sundae-5a393f.netlify.app/)
