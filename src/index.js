@@ -1,4 +1,4 @@
-﻿import tpl from './index.hbs';
+import tpl from './index.hbs';
  
 import './assets/styles/global.scss';
 import './assets/styles/menuGlobal.scss';
