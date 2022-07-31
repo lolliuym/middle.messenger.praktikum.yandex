@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="profile">  
+    <div class="profile__avatar">
+     <div class="avatar" style="b3390db36ad02759">
+        <i class="fa fa-solid fa-image"></i>
+        <div class="avatar__change pointer" data-modal_change="modal-change">
+          <p>Поменять аватар</p>
+        </div>
+ </div>
+      <div class="name">Иван</div>
+    </div>
+    
+<div class="modal  modal-exit" id="modal-change">
+    <div class="modal__dialog text-center">
+        <button class="modal__close modal-exit">×</button>
+        <header class="modal__header">
+            <h1 class="modal__title">Загрузите файл</h1>
+        </header>
+      <div class="modal__content"><p><a class="text-link">Выбрать файл на компьютере</a></p></div>
+            <button class="btn btn--primary modal-exit ">Поменять</button>
+        
+    </div>
+</div>
+    <div class="profile__passport">
+        <div class="profile__row">
+         <p class="text-black">Почта</p>
+         <input class="text-muted" name="email" value="pochta@yandex.ru" type="text" readonly="">
+         
+       </div>
+      <div class="profile__row">
+         <p class="text-black">Логин</p>
+<input class="text-muted" name="login" value="ivanivanov" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Имя</p>
+<input class="text-muted" name="first_name" value="Иван" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Фамилия</p>
+<input class="text-muted" name="second_name" value="Иванов" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Имя в чате</p>
+<input class="text-muted" name="display_name" value="Иван" type="text" readonly="">       </div>
+      <div class="profile__row">
+         <p class="text-black">Телефон</p>
+<input class="text-muted" name="phone" value="+7 (909) 967 30 30" type="text" readonly="">       </div>
+     </div>
+    <div class="profile__action">
+      <p><a href="" class="text-link">Изменить данные</a></p>
+      <p><a href="" class="text-link">Изменить пароль</a></p>
+      <p><a href="" class="text-danger">Выйти</a></p>
+      
+    </div>
+    
+  </div>
+
+</div>
+<script src="de7799a1f9e256b3"></script>

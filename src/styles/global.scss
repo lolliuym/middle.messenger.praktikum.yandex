@@ -1,0 +1,150 @@
+ @import url("./fonts.scss");
+
+:root {
+  --color-black: #1E1E1E;
+  --color-white: #ffffff;
+  --color-blue: #3369F3;
+  --color-cornflowerblue: #74b9ff;
+  --color-grey: #999999;
+  --color-border: #e2e2e2;
+  --color-red: #ff0000;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background: var(--color-white);
+  color: var(--color-black)  ;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  line-height: 15px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul, 
+li,
+hr,
+form {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  border-radius: 6px;
+  background-color: var(--color-border);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-cornflowerblue);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.row {
+  width: 100%;
+  display:flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+}
+.container {
+  background: var(--color-white);
+  border-radius: 7px;
+  margin: 60px auto;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.col {
+  &-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  &-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+.text-grey {
+  margin: 0;
+  margin-right: 10px;
+  font-weight: 500;
+  color: var(--color-grey);
+}
+.text-muted {
+  color: var(--color-grey);
+}
+.text-link {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+.text-danger {
+  color: var(--color-red);  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+input {
+  margin: 10px 0;
+  width: 100%;
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid var(--color-blue);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  width: 95%;
+  border: 1px solid #e3e3e3;
+}
+
+.offset-md-9 {
+  .chat-bubble {
+    background: var(--color-blue);
+    color: var(--color-black);
+  }
+}
