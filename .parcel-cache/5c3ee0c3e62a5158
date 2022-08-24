@@ -1,4 +1,0 @@
- <button id="{{id}}" class="button">
-	{{value}}
-</button>
-<script src="3bcacef022c2754b"></script>
