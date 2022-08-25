@@ -3,7 +3,7 @@ const modal_add = document.querySelectorAll("[data-modal_add]");
 const modal_delete = document.querySelectorAll("[data-modal_delete]");
 const modal_clip = document.querySelectorAll("[data-modal_clip]");
 
-function modalAccount() {
+export default function modalAccount() {
   modal_account.forEach(function (trigger) {
     trigger.addEventListener("click", function (event) {
       event.preventDefault();
