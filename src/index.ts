@@ -1,10 +1,12 @@
 import tpl from './index.hbs';
- 
+
+
 import './assets/styles/global.scss';
 import './assets/styles/menuGlobal.scss';
 import './assets/styles/modal.scss';
 import './assets/styles/popup.scss';
 import './assets/styles/buttons.scss';
+
 
 
 
@@ -19,17 +21,8 @@ import settingPassword from './pages/SettingPassword';
 import settingProfile from './pages/SettingProfile';
 
 
-console.log(tpl);
+const root:HTMLElement | null = document.getElementById("root");
 
-document.getElementById('root').innerHTML = tpl({
-
-});
+root.innerHTML = tpl({});
 
 
-window.createButton = (id, value) => {
-
-	const htmlTpl = document.createElement('template');
-	htmlTpl.innerHTML = button(id,value);
-
-	document.getElementById('root').appendChild(htmlTpl.content);
-}

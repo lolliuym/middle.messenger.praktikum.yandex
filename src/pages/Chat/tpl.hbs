@@ -18,7 +18,7 @@
           <span class="tray--right">
             <i
               class="pointer fa fa-solid fa-bars"
-              onClick="modalAccount()"
+              onClick="modalAccount"
               data-modal_account="modal-menu"
             ></i>
 
@@ -343,3 +343,27 @@
   </div>
 </div>
 
+ 
+<script>
+ const modal_account = document.querySelectorAll("[data-modal_account]");
+const modal_add = document.querySelectorAll("[data-modal_add]");
+const modal_delete = document.querySelectorAll("[data-modal_delete]");
+const modal_clip = document.querySelectorAll("[data-modal_clip]");
+
+ 
+
+function modalAccount() {
+  modal_account.forEach(function (trigger) {
+    trigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      const modal = window.getElementById(trigger.dataset.modal_account);
+      modal.classList.toggle("open");
+      trigger.classList.toggle("modal-exit");
+      const exits = window.querySelectorAll(".modal-exit");
+    });
+  });
+} 
+
+
+
+</script>
